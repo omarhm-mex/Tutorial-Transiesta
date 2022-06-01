@@ -1,0 +1,34 @@
+SystemLabel ELEC
+
+%include STRUCT_ELEC.fdf
+
+%block kgrid.MonkhorstPack
+  50  0    0 	0.0
+  0   5    0 	0.0
+  0   0    5  	0.0
+%endblock kgrid.MonkhorstPack
+
+PAO.BasisSize          SZP
+PAO.EnergyShift        0.01 Ry
+XC.functional          GGA
+XC.authors             PBE
+MeshCutoff             250.000000 Ry
+FilterCutoff           150.000000 Ry
+
+ElectronicTemperature  300 K
+OccupationFunction     FD
+
+MinSCFIterations       3
+MaxSCFIterations       100
+SCF.DM.Tolerance       0.0001
+# Mixing parameters:
+SCF.Mixer.Weight       0.30
+SCF.Mixer.History      6
+SCF.Mix.First          true
+DM.UseSaveDM           .false.
+
+MD.NumCGSteps          0
+
+SaveHS                 	true
+TS.HS.Save		true
+TS.DE.Save		true

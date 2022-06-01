@@ -1,0 +1,22 @@
+[I 22:15:45.392 NotebookApp] The port 8888 is already in use, trying another port.
+[I 22:15:45.392 NotebookApp] The port 8889 is already in use, trying another port.
+[I 22:15:45.392 NotebookApp] The port 8890 is already in use, trying another port.
+[I 22:15:45.453 NotebookApp] JupyterLab extension loaded from /home/omarhm/anaconda3/lib/python3.8/site-packages/jupyterlab
+[I 22:15:45.453 NotebookApp] JupyterLab application directory is /home/omarhm/anaconda3/share/jupyter/lab
+[I 22:15:45.454 NotebookApp] Serving notebooks from local directory: /home/omarhm/Dropbox/unam/omarhm_pcq/tutorial_transistor_grafeno
+[I 22:15:45.454 NotebookApp] The Jupyter Notebook is running at:
+[I 22:15:45.454 NotebookApp] http://localhost:8891/?token=eac35c858888267569832d3708c6907d461796b223272032
+[I 22:15:45.454 NotebookApp]  or http://127.0.0.1:8891/?token=eac35c858888267569832d3708c6907d461796b223272032
+[I 22:15:45.454 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 22:15:45.485 NotebookApp] 
+    
+    To access the notebook, open this file in a browser:
+        file:///home/omarhm/.local/share/jupyter/runtime/nbserver-13981-open.html
+    Or copy and paste one of these URLs:
+        http://localhost:8891/?token=eac35c858888267569832d3708c6907d461796b223272032
+     or http://127.0.0.1:8891/?token=eac35c858888267569832d3708c6907d461796b223272032
+[W 22:15:47.091 NotebookApp] Notebook tutorial_grafeno.ipynb is not trusted
+[I 22:15:47.282 NotebookApp] Kernel started: 99240c24-f412-4efa-9ffa-48d540b4d938
+[IPKernelApp] ERROR | No such comm target registered: jupyter.widget.control
+[IPKernelApp] WARNING | No such comm: 4c752d19-0620-4c74-a398-6a8fa325103a
+[I 22:17:47.299 NotebookApp] Saving file at /tutorial_grafeno.ipynb
