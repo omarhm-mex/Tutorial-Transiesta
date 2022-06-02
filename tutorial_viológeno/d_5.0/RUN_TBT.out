@@ -1,0 +1,219 @@
+TBtrans Version: v4.1-b4
+Architecture  : x86_64_MPI_INTEL
+Compiler flags: mpiifort -O3 -fPIC -xHost -ip -no-prec-div
+PP flags      : -DFC_HAVE_ABORT -DMPI -DCDF -DNCDF -DNCDF_4 -DTBTRANS
+Libraries     :  libncdf.a libfdict.a  -lnetcdff -lnetcdf -lhdf5_hl -lhdf5 -lz -lmkl_scalapacck_lp64 -lmkl_intel_lp64 -lmkl_sequential -lmkl_core -lmkl_blacs_intelmpi_lp64 -lpthread -lm -ldl
+PARALLEL version
+NetCDF support
+NetCDF-4 support
+
+* Running on 20 nodes in parallel
+>> Start of run:  13-MAY-2022  19:17:36
+
+                           ************************ 
+                           *  WELCOME TO TBtrans  * 
+                           ************************ 
+
+reinit: Reading from RUN.fdf
+
+reinit: -----------------------------------------------------------------------
+reinit: System Name: 
+reinit: -----------------------------------------------------------------------
+reinit: System Label: siesta
+reinit: -----------------------------------------------------------------------
+ 
+ Kpoints in:            1 . Kpoints trimmed:            1
+tbt: Number of transport k-points = 1
+tbt: Method = Monkhorst-Pack grid.
+tbt: k-grid: Supercell and displacements
+tbt:            1   0   0      0.000
+tbt:            0   1   0      0.000
+tbt:            0   0   1      0.000
+ 
+ 
+tbt: **************************************************************
+tbt: Electronic temperature (reference)             =  299.9978 K
+tbt: No applied bias
+tbt: Calculate transmission only using diag(Gf)     =    F
+tbt: Saving bulk transmission for electrodes        =    F
+tbt: Saving DOS from bulk electrodes                =    F
+tbt: Saving DOS from Green function                 =    F
+tbt: Saving DOS from spectral functions             =    F
+tbt: Saving bond currents (orb-orb)                 =    F
+tbt: Saving DM from Green function                  =    F
+tbt: Saving DM from spectral functions              =    F
+tbt: Saving COOP from Green function                =    F
+tbt: Saving COOP from spectral functions            =    F
+tbt: Saving COHP from Green function                =    F
+tbt: Saving COHP from spectral functions            =    F
+tbt: Calc. # transmission eigenvalues               =  0
+tbt: Calc. T between all electrodes                 =    F
+tbt: Calc. total T out of electrodes                =    F
+tbt: Non-polarized Hamiltonian
+tbt: BTD creation algorithm                         =    speed
+tbt: BTD spectral function algorithm                =    propagation
+tbt: Divide and conquer diagonalization             =    F
+tbt: Assume LAPACK <i|S|j> = delta_ij               =    F
+tbt: Saving downfolded self-energies                =    F
+tbt: No delta Hamiltonian
+tbt: No delta self-energy
+tbt: Data files stored in current folder
+tbt: No compression of TBT.nc files
+tbt: Default NetCDF precision                       =    single
+tbt: Parallel MPI-IO not possible
+tbt:           >> Electrodes << 
+tbt: >> Left
+tbt:   Electrode cell pivoting: E1, E2, E3          = A1, A2, A3
+tbt:   In-core self-energy calculation
+tbt:   Electrode TSHS file                          = ../ELEC.TSHS
+tbt:   # atoms used in electrode                    =   72
+tbt:   Electrode Bloch unity [E1 x E2 x E3]         = 1 x 1 x 1
+tbt:   Position in geometry                         = 1 -- 72
+tbt:   Semi-infinite direction for electrode        = negative wrt. E1
+tbt:   Chemical shift                               =    0.000000 eV
+tbt:   Electronic temperature                       =  299.997806 K
+tbt:   Gamma-only electrode                         =    T
+tbt:   Bulk H, S in electrode region                =    T
+tbt:   Electrode self-energy imaginary Eta          =  0.1000E-03  eV
+tbt:   Electrode self-energy accuracy               =  0.1000E-13  eV
+tbt:   Electrode inter-layer distance (semi-inf)    =    2.0400  Ang
+tbt: >> Right
+tbt:   Electrode cell pivoting: E1, E2, E3          = A1, A2, A3
+tbt:   In-core self-energy calculation
+tbt:   Electrode TSHS file                          = ../ELEC.TSHS
+tbt:   # atoms used in electrode                    =   72
+tbt:   Electrode Bloch unity [E1 x E2 x E3]         = 1 x 1 x 1
+tbt:   Position in geometry                         = 105 -- 176
+tbt:   Semi-infinite direction for electrode        = positive wrt. E1
+tbt:   Chemical shift                               =    0.000000 eV
+tbt:   Electronic temperature                       =  299.997806 K
+tbt:   Gamma-only electrode                         =    T
+tbt:   Bulk H, S in electrode region                =    T
+tbt:   Electrode self-energy imaginary Eta          =  0.1000E-03  eV
+tbt:   Electrode self-energy accuracy               =  0.1000E-13  eV
+tbt:   Electrode inter-layer distance (semi-inf)    =    2.0400  Ang
+ts:              >> TBtrans contour << 
+ts: Device Green function imaginary Eta             =  0.000     eV
+ts: Contour name                                    =    TBT.Contour.IV
+ts:   line contour E_min                            =   -0.1293 eV
+ts:   line contour E_max                            =    0.1293 eV
+ts:   line contour points                           =   26
+ts:   line contour method                           =    Mid-rule
+tbt: **************************************************************
+ 
+tbt: <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+%block TBT.Contours
+    IV
+%endblock TBT.Contours
+
+%block TBT.Contour.IV
+     from - |V|/2 - 5 kT to |V|/2 + 5 kT
+      delta 0.01 eV
+        method mid-rule
+%endblock TBT.Contour.IV
+tbt: <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+************************ Begin: TBT CHECKS AND WARNINGS ************************
+************************ End: TBT CHECKS AND WARNINGS **************************
+
+Device information (full):
+  <sparsity:siesta.TSHS
+    nrows_g=1524 nrows=1524 sparsity=.3020 nnzs=701354, refcount: 3>
+ 
+Electrode information:
+ 
+  <sparsity:../ELEC.TSHS
+    nrows_g=648 nrows=648 sparsity=1.3086 nnzs=549488, refcount: 3>
+  <sparsity:(TM [ 0,--,--] of: ../ELEC.TSHS)
+    nrows_g=648 nrows=648 sparsity=.7063 nnzs=296584, refcount: 3>
+  <sparsity:(TM [-1,--,--] of: ../ELEC.TSHS)
+    nrows_g=648 nrows=648 sparsity=.3011 nnzs=126452, refcount: 3>
+ Left principal cell is perfect!
+ 
+  <sparsity:../ELEC.TSHS
+    nrows_g=648 nrows=648 sparsity=1.3086 nnzs=549488, refcount: 3>
+  <sparsity:(TM [ 0,--,--] of: ../ELEC.TSHS)
+    nrows_g=648 nrows=648 sparsity=.7063 nnzs=296584, refcount: 3>
+  <sparsity:(TM [ 1,--,--] of: ../ELEC.TSHS)
+    nrows_g=648 nrows=648 sparsity=.3011 nnzs=126452, refcount: 3>
+ Right principal cell is perfect!
+ 
+
+tbt: Analyzing electrode sparsity pattern and electrode pivot-tables
+tbt: BTD pivoting scheme for electrode (Left): atom+Left
+
+tbt: Analyzing device sparsity pattern and pivot-table
+tbt: BTD pivoting scheme in device: atom+Right
+tbt: Done analyzing electrode and device sparsity pattern and pivot-tables
+
+tbt: Reducing matrix (H, S) sparsity patterns by: 170344
+
+tbt: # of device region orbitals: 228
+Region (32): [A]-device
+  [ 73 -- 104 ]
+ 
+tbt: # of Left electrode orbitals: 34
+tbt: # of Left down-folding orbitals: 682
+Region (72): [A]-Left folding region
+  [ 1 -- 72 ]
+Region (5): [A]-Left folding in D
+  [ 88 -- 90, 101 -- 102 ]
+ 
+tbt: # of Right electrode orbitals: 43
+tbt: # of Right down-folding orbitals: 691
+Region (72): [A]-Right folding region
+  [ 105 -- 176 ]
+Region (6): [A]-Right folding in D
+  [ 74, 84 -- 85, 97 -- 98, 103 ]
+
+tbt: Creating electrode tri-diagonal matrix blocks
+tbt: Creating device tri-diagonal matrix blocks
+Region (4): [TRI] device region
+  [ 44, 70, 79, 35 ]
+tbt: Matrix elements in BTD: 37052
+
+tbt: Electrodes tri-diagonal matrices
+Region (3): [TRI] Left
+  [ 165, 483, 34 ]
+Region (3): [TRI] Right
+  [ 171, 477, 43 ]
+ 
+tbt: Electrode memory:   28.952 MB
+tbt: Sparse H, S and auxiliary matrices memory:   11.363 MB
+tbt: Sum of electrode and sparse memory:   40.315 MB
+
+tbt: Initializing data file: siesta.TBT.nc
+tbt: Estimated file size of siesta.TBT.nc:  12.809 KB
+
+tbt: LHS Green function padding / memory: 5001796 /   76.887 MB
+tbt: RHS Green function padding / memory: 802756 /   12.814 MB
+tbt: Initial ETA in                2.322 s
+tbt: Calculated  76.923 %, ETA in                2.322 s
+tbt: Completed in               15.889 s
+
+Currents (ensure entire Fermi function window):
+Left -> Right, V [V] / I [A]:  0.00000     V /  0.00000     A
+Left -> Right, V [V] / P [W]:  0.00000     V /  0.00000     W
+ 
+
+             Section          Calls    Walltime       %
+ global_section                   1      17.426  100.00
+  tbtrans                         1      17.426  100.00
+   init-region+sp                 1       0.058    0.34
+   pivot-elec                     1       0.032    0.18
+    pivot                         1       0.009    0.05
+   pivot-device                   1       0.009    0.05
+    pivot                         1       0.008    0.05
+   tri-init                       1       0.227    1.30
+    tri-init-elec                 1       0.180    1.03
+     TS-rgn2tri                   1       0.001    0.01
+    TS-rgn2tri                    1       0.000    0.00
+   TBT                            1      16.286   93.46
+    read-GS                       2      15.834   90.86
+    SE-dwn                        2       0.041    0.23
+     ts_expand                    2       0.002    0.01
+    Gf-prep                       2       0.003    0.02
+     V_TM_Pinv                    1       0.001    0.01
+    analysis                      2       0.024    0.14
+    cdf2ascii                     1       0.004    0.02
+>> End of run:  13-MAY-2022  19:17:53
